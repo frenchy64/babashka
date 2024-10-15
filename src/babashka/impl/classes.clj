@@ -375,6 +375,7 @@
                 java.nio.file.StandardOpenOption
                 java.nio.channels.ByteChannel
                 java.nio.channels.Channels
+                java.nio.channels.DatagramChannel
                 java.nio.channels.FileChannel
                 java.nio.channels.FileChannel$MapMode
                 java.nio.channels.ReadableByteChannel
@@ -474,6 +475,7 @@
           java.util.concurrent.BlockingQueue
           java.util.concurrent.ArrayBlockingQueue
           java.util.concurrent.LinkedBlockingQueue
+          java.util.concurrent.PriorityBlockingQueue
           java.util.concurrent.ScheduledFuture
           java.util.concurrent.ScheduledThreadPoolExecutor
           java.util.concurrent.Semaphore
