@@ -375,6 +375,7 @@
                 java.nio.file.StandardOpenOption
                 java.nio.channels.ByteChannel
                 java.nio.channels.Channels
+                java.nio.channels.DatagramChannel
                 java.nio.channels.FileChannel
                 java.nio.channels.FileChannel$MapMode
                 java.nio.channels.ReadableByteChannel
