@@ -475,6 +475,7 @@
           java.util.concurrent.BlockingQueue
           java.util.concurrent.ArrayBlockingQueue
           java.util.concurrent.LinkedBlockingQueue
+          java.util.concurrent.PriorityBlockingQueue
           java.util.concurrent.ScheduledFuture
           java.util.concurrent.ScheduledThreadPoolExecutor
           java.util.concurrent.Semaphore
