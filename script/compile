@@ -2,6 +2,10 @@
 
 set -eou pipefail
 
+set -x
+
+echo REBEL: $BABASHKA_FEATURE_REBEL_READLINE
+
 BABASHKA_XMX=${BABASHKA_XMX:-"-J-Xmx4500m"}
 
 if [ -z "$GRAALVM_HOME" ]; then
@@ -84,6 +88,14 @@ if [ "$BABASHKA_FEATURE_SELMER" = "true" ]; then
     args+=("-H:IncludeResources=json.human.css")
 fi
 
+BABASHKA_FEATURE_REBEL_READLINE=${BABASHKA_FEATURE_REBEL_READLINE:-}
+
+if [ "$BABASHKA_FEATURE_REBEL_READLINE" = "true" ]; then
+    #FIXME this doesn't seem necessary for other features
+    args+=("-EBABASHKA_FEATURE_REBEL_READLINE")
+    args+=("--initialize-at-build-time=org.jline.utils.AttributedStyle")
+fi
+
 BABASHKA_LEAN=${BABASHKA_LEAN:-}
 
 if [ "$BABASHKA_LEAN" = "true" ]
@@ -115,6 +127,7 @@ then
     fi
 fi
 
+echo REBEL: $BABASHKA_FEATURE_REBEL_READLINE
 "$GRAALVM_HOME/bin/native-image" "${args[@]}" "$@"
 
 ./"$BABASHKA_BINARY" describe
