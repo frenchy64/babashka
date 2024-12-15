@@ -28,6 +28,7 @@
 (def lanterna? (= "true" (System/getenv "BABASHKA_FEATURE_LANTERNA")))
 (def spec-alpha? (= "true" (System/getenv "BABASHKA_FEATURE_SPEC_ALPHA")))
 (def rrb-vector? (= "true" (System/getenv "BABASHKA_FEATURE_RRB_VECTOR")))
+(def rebel-readline? (= "true" (System/getenv "BABASHKA_FEATURE_REBEL_READLINE")))
 
 (when xml?
   (require '[babashka.impl.xml]))
@@ -80,3 +81,6 @@
 
 (when rrb-vector?
   (require '[babashka.impl.rrb-vector]))
+
+(when rebel-readline?
+  (require '[rebel-readline.main]))

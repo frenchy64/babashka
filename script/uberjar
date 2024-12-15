@@ -175,6 +175,13 @@ else
     BABASHKA_LEIN_PROFILES+=",-feature/rrb-vector"
 fi
 
+if [ "$BABASHKA_FEATURE_REBEL_READLINE" = "true" ]
+then
+    BABASHKA_LEIN_PROFILES+=",+feature/rebel-readline"
+else
+    BABASHKA_LEIN_PROFILES+=",-feature/rebel-readline"
+fi
+
 #lein with-profiles "$BABASHKA_LEIN_PROFILES,+reflection,-uberjar" deps :tree
 #exit 0
 

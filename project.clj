@@ -80,6 +80,8 @@
                                     :dependencies [[org.clojure/data.priority-map "1.1.0"]]}
              :feature/rrb-vector {:source-paths ["feature-rrb-vector"]
                                   :dependencies [[org.clojure/core.rrb-vector "0.1.2"]]}
+             :feature/rebel-readline {:source-paths ["feature-rebel-readline"]
+                                      :dependencies [[com.bhauman/rebel-readline "0.1.4"]]}
              :test [:feature/xml
                     :feature/lanterna
                     :feature/yaml
