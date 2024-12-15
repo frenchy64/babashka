@@ -365,6 +365,7 @@ Use bb run --help to show this help output.
   (into [] cat xs))
 
 (def main-var (sci/new-var 'main nil {:ns clojure-main-ns}))
+(assert features/clob?)
 
 (def namespaces
   (cond->

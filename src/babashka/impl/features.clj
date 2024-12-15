@@ -17,6 +17,8 @@
 (def selmer?         (not= "false" (System/getenv "BABASHKA_FEATURE_SELMER")))
 (def logging?        (not= "false" (System/getenv "BABASHKA_FEATURE_LOGGING")))
 (def priority-map?   (not= "false" (System/getenv "BABASHKA_FEATURE_PRIORITY_MAP")))
+(def clob?           (not= "false" (System/getenv "BABASHKA_FEATURE_CLOB")))
+(assert clob?)
 
 ;; excluded by default
 (def jdbc? (= "true" (System/getenv "BABASHKA_FEATURE_JDBC")))
@@ -28,7 +30,6 @@
 (def lanterna? (= "true" (System/getenv "BABASHKA_FEATURE_LANTERNA")))
 (def spec-alpha? (= "true" (System/getenv "BABASHKA_FEATURE_SPEC_ALPHA")))
 (def rrb-vector? (= "true" (System/getenv "BABASHKA_FEATURE_RRB_VECTOR")))
-(def clob? (= "true" (System/getenv "BABASHKA_FEATURE_CLOB")))
 
 (when xml?
   (require '[babashka.impl.xml]))

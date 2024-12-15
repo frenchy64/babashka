@@ -175,7 +175,7 @@ else
     BABASHKA_LEIN_PROFILES+=",-feature/rrb-vector"
 fi
 
-if [ "$BABASHKA_FEATURE_CLOB" = "true" ]
+if [ "$BABASHKA_FEATURE_CLOB" != "false" ]
 then
     BABASHKA_LEIN_PROFILES+=",+feature/clob"
 else
