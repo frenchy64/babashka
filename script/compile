@@ -84,7 +84,9 @@ if [ "$BABASHKA_FEATURE_SELMER" = "true" ]; then
     args+=("-H:IncludeResources=json.human.css")
 fi
 
-if [ "$BABASHKA_FEATURE_SELMER" != "false" ]; then
+BABASHKA_FEATURE_CLOB=${BABASHKA_FEATURE_CLOB:-}
+
+if [ "$BABASHKA_FEATURE_CLOB" != "false" ]; then
     args+=("-J-Dorg.jline.terminal.disableDeprecatedProviderWarning=true")
     args+=("-H:IncludeResources=CLOB_VERSION")
     args+=("-H:IncludeResources='org/jline/utils/.*'")
