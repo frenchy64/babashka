@@ -100,6 +100,7 @@
                     :feature/logging
                     :feature/priority-map
                     :feature/rrb-vector
+                    :feature/rebel-readline
                     {:dependencies [[borkdude/rewrite-edn "0.4.6"]
                                     [com.clojure-goes-fast/clj-async-profiler "0.5.0"]
                                     [com.opentable.components/otj-pg-embedded "0.13.3"]

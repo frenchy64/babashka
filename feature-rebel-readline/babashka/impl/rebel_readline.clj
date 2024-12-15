@@ -6,4 +6,4 @@
 (def cns (sci/create-ns 'rebel-readline.main nil))
 
 (def rebel-readline-main-namespace
-  {'-main (sci/copy-var rebel-readline.main/-main rns)})
+  {'-main (sci/copy-var rebel-readline.main/-main cns)})
