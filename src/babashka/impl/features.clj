@@ -83,4 +83,4 @@
   (require '[babashka.impl.rrb-vector]))
 
 (when rebel-readline?
-  (require '[rebel-readline.main]))
+  (require '[babashka.impl.rebel-readline]))

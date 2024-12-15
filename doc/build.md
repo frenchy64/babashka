@@ -189,5 +189,16 @@ $ script/compile
 Example program:
 
 ``` clojure
-FIXME rebel-readline + bb example
+$ bb -m rebel-readline.main
+[Rebel readline] Type :repl/help for online help info
+clojure.core=> :repl/help
+Current key map: :emacs
+Clojure key bindings:
+  "TAB"       clojure-indent-or-complete
+  "^X^A"      clojure-apropos-at-point
+  "^X^D"      clojure-doc-at-point
+  "^X^E"      clojure-eval-at-point
+  "^X^I"      clojure-indent-line
+  "^X^M"      clojure-force-accept-line
+  "^X^S"      clojure-source-at-point
 ```
