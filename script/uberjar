@@ -175,6 +175,13 @@ else
     BABASHKA_LEIN_PROFILES+=",-feature/rrb-vector"
 fi
 
+if [ "$BABASHKA_FEATURE_CLOB" != "false" ]
+then
+    BABASHKA_LEIN_PROFILES+=",+feature/clob"
+else
+    BABASHKA_LEIN_PROFILES+=",-feature/clob"
+fi
+
 #lein with-profiles "$BABASHKA_LEIN_PROFILES,+reflection,-uberjar" deps :tree
 #exit 0
 

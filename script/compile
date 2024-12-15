@@ -84,6 +84,13 @@ if [ "$BABASHKA_FEATURE_SELMER" = "true" ]; then
     args+=("-H:IncludeResources=json.human.css")
 fi
 
+if [ "$BABASHKA_FEATURE_SELMER" != "false" ]; then
+    args+=("-J-Dorg.jline.terminal.disableDeprecatedProviderWarning=true")
+    args+=("-H:IncludeResources=CLOB_VERSION")
+    args+=("-H:IncludeResources='org/jline/utils/.*'")
+    args+=("--initialize-at-build-time")
+fi
+
 BABASHKA_LEAN=${BABASHKA_LEAN:-}
 
 if [ "$BABASHKA_LEAN" = "true" ]
@@ -114,6 +121,8 @@ then
         export BABASHKA_SHA=$sha
     fi
 fi
+
+echo "CLOB=$BABASHKA_FEATURE_CLOB"
 
 "$GRAALVM_HOME/bin/native-image" "${args[@]}" "$@"
 

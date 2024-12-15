@@ -80,6 +80,19 @@
                                     :dependencies [[org.clojure/data.priority-map "1.1.0"]]}
              :feature/rrb-vector {:source-paths ["feature-rrb-vector"]
                                   :dependencies [[org.clojure/core.rrb-vector "0.1.2"]]}
+             :feature/clob [:feature/sqlite
+                            {:source-paths ["feature-clob"
+                                            "../src" "../classes" "../resources"
+                                            "../readline/classes"
+                                            "../readline/src" "../peg/src"]
+                             :dependencies [[org.jline/jline-reader "3.24.1"]
+                                            [org.jline/jline-terminal "3.24.1"]
+                                            [org.jline/jline-terminal-jansi "3.24.1"]
+                                            [compliment/compliment "0.6.0"]
+                                            [org.clojure/java.jdbc "0.7.12"]
+                                            [dev.weavejester/cljfmt "0.13.0"]
+                                            ;[org.xerial/sqlite-jdbc "3.47.1.0"]
+                                            ]}]
              :test [:feature/xml
                     :feature/lanterna
                     :feature/yaml
