@@ -282,7 +282,8 @@ Use bb run --help to show this help output.
  :feature/spec-alpha %s
  :feature/selmer %s
  :feature/logging %s
- :feature/priority-map %s}")
+ :feature/priority-map %s
+ :feature/clob %s}")
     version
     build-commit-sha
     features/csv?
@@ -303,7 +304,8 @@ Use bb run --help to show this help output.
     features/spec-alpha?
     features/selmer?
     features/logging?
-    features/priority-map?)))
+    features/priority-map?
+    features/clob?)))
 
 (defn read-file [file]
   (let [f (io/file file)]
@@ -441,6 +443,7 @@ Use bb run --help to show this help output.
     features/jdbc? (assoc 'next.jdbc @(resolve 'babashka.impl.jdbc/njdbc-namespace)
                           'next.jdbc.sql @(resolve 'babashka.impl.jdbc/next-sql-namespace)
                           'next.jdbc.result-set @(resolve 'babashka.impl.jdbc/result-set-namespace))
+    features/clob? (assoc 'clob.frontend.rebel @(resolve 'babashka.impl.clob/clob-frontend-rebel-namespace))
     features/csv? (assoc 'clojure.data.csv @(resolve 'babashka.impl.csv/csv-namespace))
     features/transit? (assoc 'cognitect.transit @(resolve 'babashka.impl.transit/transit-namespace))
     features/datascript? (assoc 'datascript.core @(resolve 'babashka.impl.datascript/datascript-namespace)
