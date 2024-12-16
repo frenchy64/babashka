@@ -190,15 +190,136 @@ Example program:
 
 ``` clojure
 $ bb -m rebel-readline.main
-[Rebel readline] Type :repl/help for online help info
-clojure.core=> :repl/help
-Current key map: :emacs
-Clojure key bindings:
-  "TAB"       clojure-indent-or-complete
-  "^X^A"      clojure-apropos-at-point
-  "^X^D"      clojure-doc-at-point
-  "^X^E"      clojure-eval-at-point
-  "^X^I"      clojure-indent-line
-  "^X^M"      clojure-force-accept-line
-  "^X^S"      clojure-source-at-point
+Dec 15, 2024 6:04:39 PM org.jline.utils.Log logr
+WARNING: Unable to retrieve infocmp for type screen-256color
+java.lang.NullPointerException
+        at java.base@21.0.2/java.io.Reader.<init>(Reader.java:168)
+        at org.jline.utils.InputStreamReader.<init>(InputStreamReader.java:135)
+        at org.jline.utils.InfoCmp.loadDefaultInfoCmp(InfoCmp.java:609)
+        at org.jline.utils.InfoCmp.lambda$static$3(InfoCmp.java:619)
+        at org.jline.utils.InfoCmp.getLoadedInfoCmp(InfoCmp.java:558)
+        at org.jline.utils.InfoCmp.getInfoCmp(InfoCmp.java:546)
+        at org.jline.terminal.impl.AbstractTerminal.parseInfoCmp(AbstractTerminal.java:168)
+        at org.jline.terminal.impl.PosixSysTerminal.<init>(PosixSysTerminal.java:43)
+        at org.jline.terminal.TerminalBuilder.doBuild(TerminalBuilder.java:334)
+        at org.jline.terminal.TerminalBuilder.build(TerminalBuilder.java:219)
+        at rebel_readline.jline_api$create_terminal.invokeStatic(jline_api.clj:62)
+        at rebel_readline.jline_api$create_terminal.doInvoke(jline_api.clj:59)
+        at clojure.lang.RestFn.invoke(RestFn.java:400)
+        at rebel_readline.clojure.main$_main.invokeStatic(main.clj:112)
+        at rebel_readline.clojure.main$_main.doInvoke(main.clj:111)
+        at clojure.lang.RestFn.invoke(RestFn.java:400)
+        at clojure.lang.AFn.applyToHelper(AFn.java:152)
+        at clojure.lang.RestFn.applyTo(RestFn.java:135)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at rebel_readline.main$_main.invokeStatic(main.clj:5)
+        at rebel_readline.main$_main.doInvoke(main.clj:5)
+        at clojure.lang.RestFn.invoke(RestFn.java:400)
+        at clojure.lang.AFn.applyToHelper(AFn.java:152)
+        at clojure.lang.RestFn.applyTo(RestFn.java:135)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at clojure.core$apply.invoke(core.clj:662)
+        at sci.lang.Var.invoke(lang.cljc:211)
+        at sci.impl.analyzer$return_call$reify__4588.eval(analyzer.cljc:1420)
+        at sci.impl.interpreter$eval_form.invokeStatic(interpreter.cljc:40)
+        at sci.impl.interpreter$eval_string_STAR_.invokeStatic(interpreter.cljc:66)
+        at sci.impl.interpreter$eval_string_STAR_.invoke(interpreter.cljc:57)
+        at sci.impl.interpreter$eval_string_STAR_.invokeStatic(interpreter.cljc:59)
+        at sci.core$eval_string_STAR_.invokeStatic(core.cljc:272)
+        at babashka.main$exec$fn__34343$fn__34381$fn__34382.invoke(main.clj:1054)
+        at babashka.main$exec$fn__34343$fn__34381.invoke(main.clj:1054)
+        at babashka.main$exec$fn__34343.invoke(main.clj:1044)
+        at clojure.lang.AFn.applyToHelper(AFn.java:152)
+        at clojure.lang.AFn.applyTo(AFn.java:144)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+        at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+        at clojure.lang.RestFn.invoke(RestFn.java:428)
+        at babashka.main$exec.invokeStatic(main.clj:839)
+        at babashka.main$main.invokeStatic(main.clj:1231)
+        at babashka.main$main.doInvoke(main.clj:1175)
+        at clojure.lang.RestFn.applyTo(RestFn.java:140)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at babashka.main$_main.invokeStatic(main.clj:1263)
+        at babashka.main$_main.doInvoke(main.clj:1255)
+        at clojure.lang.RestFn.applyTo(RestFn.java:140)
+        at babashka.main.main(Unknown Source)
+        at java.base@21.0.2/java.lang.invoke.LambdaForm$DMH/sa346b79c.invokeStaticInit(LambdaForm$DMH)
+
+Dec 15, 2024 6:04:40 PM org.jline.utils.Log logr
+WARNING: Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+Dec 15, 2024 6:04:40 PM org.jline.utils.Log logr
+WARNING: Unable to retrieve infocmp for type screen-256color
+java.lang.NullPointerException
+        at java.base@21.0.2/java.io.Reader.<init>(Reader.java:168)
+        at org.jline.utils.InputStreamReader.<init>(InputStreamReader.java:135)
+        at org.jline.utils.InfoCmp.loadDefaultInfoCmp(InfoCmp.java:609)
+        at org.jline.utils.InfoCmp.lambda$static$3(InfoCmp.java:619)
+        at org.jline.utils.InfoCmp.getLoadedInfoCmp(InfoCmp.java:558)
+        at org.jline.utils.InfoCmp.getInfoCmp(InfoCmp.java:546)
+        at org.jline.terminal.impl.AbstractTerminal.parseInfoCmp(AbstractTerminal.java:168)
+        at org.jline.terminal.impl.DumbTerminal.<init>(DumbTerminal.java:102)
+        at org.jline.terminal.TerminalBuilder.doBuild(TerminalBuilder.java:350)
+        at org.jline.terminal.TerminalBuilder.build(TerminalBuilder.java:219)
+        at rebel_readline.jline_api$create_terminal.invokeStatic(jline_api.clj:62)
+        at rebel_readline.jline_api$create_terminal.doInvoke(jline_api.clj:59)
+        at clojure.lang.RestFn.invoke(RestFn.java:400)
+        at rebel_readline.clojure.main$_main.invokeStatic(main.clj:112)
+        at rebel_readline.clojure.main$_main.doInvoke(main.clj:111)
+        at clojure.lang.RestFn.invoke(RestFn.java:400)
+        at clojure.lang.AFn.applyToHelper(AFn.java:152)
+        at clojure.lang.RestFn.applyTo(RestFn.java:135)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at rebel_readline.main$_main.invokeStatic(main.clj:5)
+        at rebel_readline.main$_main.doInvoke(main.clj:5)
+        at clojure.lang.RestFn.invoke(RestFn.java:400)
+        at clojure.lang.AFn.applyToHelper(AFn.java:152)
+        at clojure.lang.RestFn.applyTo(RestFn.java:135)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at clojure.core$apply.invoke(core.clj:662)
+        at sci.lang.Var.invoke(lang.cljc:211)
+        at sci.impl.analyzer$return_call$reify__4588.eval(analyzer.cljc:1420)
+        at sci.impl.interpreter$eval_form.invokeStatic(interpreter.cljc:40)
+        at sci.impl.interpreter$eval_string_STAR_.invokeStatic(interpreter.cljc:66)
+        at sci.impl.interpreter$eval_string_STAR_.invoke(interpreter.cljc:57)
+        at sci.impl.interpreter$eval_string_STAR_.invokeStatic(interpreter.cljc:59)
+        at sci.core$eval_string_STAR_.invokeStatic(core.cljc:272)
+        at babashka.main$exec$fn__34343$fn__34381$fn__34382.invoke(main.clj:1054)
+        at babashka.main$exec$fn__34343$fn__34381.invoke(main.clj:1054)
+        at babashka.main$exec$fn__34343.invoke(main.clj:1044)
+        at clojure.lang.AFn.applyToHelper(AFn.java:152)
+        at clojure.lang.AFn.applyTo(AFn.java:144)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+        at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+        at clojure.lang.RestFn.invoke(RestFn.java:428)
+        at babashka.main$exec.invokeStatic(main.clj:839)
+        at babashka.main$main.invokeStatic(main.clj:1231)
+        at babashka.main$main.doInvoke(main.clj:1175)
+        at clojure.lang.RestFn.applyTo(RestFn.java:140)
+        at clojure.core$apply.invokeStatic(core.clj:667)
+        at babashka.main$_main.invokeStatic(main.clj:1263)
+        at babashka.main$_main.doInvoke(main.clj:1255)
+        at clojure.lang.RestFn.applyTo(RestFn.java:140)
+        at babashka.main.main(Unknown Source)
+        at java.base@21.0.2/java.lang.invoke.LambdaForm$DMH/sa346b79c.invokeStaticInit(LambdaForm$DMH)
+
+----- Error --------------------------------------------------------------------
+Type:     java.lang.NullPointerException
+Location: <expr>:1:44
+
+----- Context ------------------------------------------------------------------
+1: (ns user (:require [rebel-readline.main])) (apply rebel-readline.main/-main *command-line-args*)
+                                              ^--- 
+
+----- Stack trace --------------------------------------------------------------
+rebel-readline.jline-api/create-terminal - <built-in>
+rebel-readline.clojure.main/-main        - <built-in>
+clojure.core/apply                       - <built-in>
+rebel-readline.main/-main                - <built-in>
+clojure.core/apply                       - <built-in>
+user                                     - <expr>:1:44
+
+
 ```
+
