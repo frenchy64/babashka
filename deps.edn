@@ -51,6 +51,10 @@
         insn/insn {:mvn/version "0.5.2"}
         org.clojure/core.rrb-vector {:mvn/version "0.1.2"}
         com.bhauman/rebel-readline {:mvn/version "0.1.4"}
+        org.jline/jline-reader {:mvn/version "3.24.1"}
+        org.jline/jline-terminal {:mvn/version "3.24.1"}
+        ;; deprecated, replaced by JNI provider. neither seems to compile on higher versions
+        org.jline/jline-terminal-jansi {:mvn/version "3.24.1"}
         org.babashka/cli {:mvn/version "0.8.61"}
         org.babashka/http-client {:mvn/version "0.4.22"}
         org.flatland/ordered {:mvn/version "1.15.12"}

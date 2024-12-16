@@ -81,7 +81,11 @@
              :feature/rrb-vector {:source-paths ["feature-rrb-vector"]
                                   :dependencies [[org.clojure/core.rrb-vector "0.1.2"]]}
              :feature/rebel-readline {:source-paths ["feature-rebel-readline"]
-                                      :dependencies [[com.bhauman/rebel-readline "0.1.4"]]}
+                                      :dependencies [[com.bhauman/rebel-readline "0.1.4"]
+                                                     [org.jline/jline-reader "3.24.1"]
+                                                     [org.jline/jline-terminal "3.24.1"]
+                                                     ;; deprecated, replaced by JNI provider. neither seems to compile on higher versions
+                                                     [org.jline/jline-terminal-jansi "3.24.1"]]}
              :test [:feature/xml
                     :feature/lanterna
                     :feature/yaml
