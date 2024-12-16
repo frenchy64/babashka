@@ -83,4 +83,6 @@
   (require '[babashka.impl.rrb-vector]))
 
 (when rebel-readline?
-  (require '[babashka.impl.rebel-readline]))
+  (require '[babashka.impl.rebel-readline]
+           '[cljfmt.core]
+           '[compliment.core]))

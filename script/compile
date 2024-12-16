@@ -94,9 +94,9 @@ if [ "$BABASHKA_FEATURE_REBEL_READLINE" = "true" ]; then
     #FIXME this doesn't seem necessary for other features
     args+=("-EBABASHKA_FEATURE_REBEL_READLINE")
     #FIXME fails due to jsoup classes being unexpectedly initialized at build time
-    #args+=("--initialize-at-build-time=org.jline.utils.AttributedStyle")
+    args+=("--initialize-at-build-time=org.jline.utils.AttributedStyle")
     # workaround
-    args+=("--initialize-at-build-time")
+    #args+=("--initialize-at-build-time")
 fi
 
 BABASHKA_LEAN=${BABASHKA_LEAN:-}

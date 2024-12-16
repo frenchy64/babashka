@@ -85,7 +85,9 @@
                                                      [org.jline/jline-reader "3.24.1"]
                                                      [org.jline/jline-terminal "3.24.1"]
                                                      ;; deprecated, replaced by JNI provider. neither seems to compile on higher versions
-                                                     [org.jline/jline-terminal-jansi "3.24.1"]]}
+                                                     [org.jline/jline-terminal-jansi "3.24.1"]
+                                                     [dev.weavejester/cljfmt "0.13.0"]
+                                                     [compliment/compliment "0.6.0"]]}
              :test [:feature/xml
                     :feature/lanterna
                     :feature/yaml
